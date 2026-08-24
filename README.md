@@ -8,18 +8,18 @@
 
 ---
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
-- ✅ Déployer MongoDB via Docker (approche reproductible)
-- ✅ Importer un jeu de données réel (25359 restaurants NYC)
-- ✅ Maîtriser les 4 piliers CRUD et les opérateurs MongoDB
-- ✅ Interroger des sous-documents et tableaux (dot-notation)
-- ✅ Écrire un script `.js` exécutable par mongosh
-- ✅ Relier la pratique aux concepts : 5V, CAP/BASE, JSON/BSON
+- Déployer MongoDB via Docker (approche reproductible)
+- Importer un jeu de données réel (25359 restaurants NYC)
+- Maîtriser les 4 piliers CRUD et les opérateurs MongoDB
+- Interroger des sous-documents et tableaux (dot-notation)
+- Écrire un script `.js` exécutable par mongosh
+- Relier la pratique aux concepts : 5V, CAP/BASE, JSON/BSON
 
 ---
 
-## 🚀 Guide de reproduction
+## Guide de reproduction
 
 ### Prérequis
 
@@ -90,7 +90,7 @@ Ouvrir dans le navigateur : **http://localhost:8081**
 
 ---
 
-## 📂 Structure des fichiers
+## Structure des fichiers
 
 ```
 tp1 jour 1/
@@ -98,17 +98,17 @@ tp1 jour 1/
 ├── primer-dataset.json         # Dataset des 25359 restaurants (téléchargé)
 ├── setup.sh                    # Script de setup (Linux/Mac)
 │
-├── reponses_jour1.md          # ✅ LIVRABLE 1 : Réponses Q1–Q28 + R1–R3
-├── rapport.js                 # ✅ LIVRABLE 2 : Script mongosh exécutable
-├── staten_island_export.json   # ✅ LIVRABLE 3 (optionnel) : Export JSON
-├── capture_express.png        # ✅ LIVRABLE 4 : Capture d'écran Mongo Express
+├── reponses_jour1.md          # LIVRABLE 1 : Réponses Q1–Q28 + R1–R3
+├── rapport.js                 # LIVRABLE 2 : Script mongosh exécutable
+├── staten_island_export.json   # LIVRABLE 3 (optionnel) : Export JSON
+├── capture_express.png        # LIVRABLE 4 : Capture d'écran Mongo Express
 │
 └── README.md                  # Ce fichier
 ```
 
 ---
 
-## 🔍 Exécuter les parties du TP
+## Exécuter les parties du TP
 
 ### Partie 1 : Lecture & Opérateurs (Q1–Q11)
 
@@ -239,7 +239,7 @@ wc -l staten_island_restaurants.json
 
 ---
 
-## 📊 Résumé des réponses clés
+## Résumé des réponses clés
 
 | Question | Réponse | Concept |
 |----------|---------|---------|
@@ -260,7 +260,7 @@ wc -l staten_island_restaurants.json
 
 ---
 
-## 🎓 Concepts liés au cours
+## Concepts liés au cours
 
 ### 1. Les 5 V du Big Data (R1)
 
@@ -275,8 +275,8 @@ wc -l staten_island_restaurants.json
 **MongoDB est CP (Consistent + Partition tolerant)**
 
 Scénario: Restaurant fermé pour insalubrité, partition réseau.
-- **Choix C:** App indisponible 1 min → Usager ne voit pas de fausses données ✅
-- **Choix A:** App répond avec données stales → Usager réserve, puis déçu ❌
+- **Choix C:** App indisponible 1 min → Usager ne voit pas de fausses données (bon)
+- **Choix A:** App répond avec données stales → Usager réserve, puis déçu (mauvais)
 
 **Pour ce service public:** La cohérence > disponibilité.
 
@@ -291,15 +291,15 @@ Limite BSON: 16 MB → capacité pour ~230000 notes/document → OK pour 10+ ans
 ### 4. Modèle Embarqué vs Référencé (R3c)
 
 **Embarqué (actuel):** Chaque restaurant contient son array `grades`
-- ✅ Localité (1 document = restaurant complet)
-- ✅ Transactions atomiques
-- ❌ Croissance illimitée
+- Avantage : Localité (1 document = restaurant complet)
+- Avantage : Transactions atomiques
+- Inconvénient : Croissance illimitée
 
 **Point de basculement:** Au-delà de 2000 notes → créer collection `inspections` séparée
 
 ---
 
-## 🔧 Dépannage
+## Dépannage
 
 ### Docker n'est pas disponible
 ```powershell
@@ -343,20 +343,20 @@ docker compose restart mongo-express
 
 ---
 
-## 📤 Livrables (à rendre avant 17h00)
+## Livrables (à rendre avant 17h00)
 
-1. ✅ **reponses_jour1.md** — Réponses Q1–Q28 + R1–R3 avec commandes exactes et résultats
-2. ✅ **rapport.js** — Script mongosh exécutable (résultat visible ci-dessus)
-3. ✅ **capture_express.png** — Capture d'écran Mongo Express (collection `restaurants`)
-4. ✅ **README.md** — Ce fichier (instructions de reproduction)
-5. ✅ **docker-compose.yml** — Fichier d'orchestration Docker
-6. ✅ **primer-dataset.json** — Dataset (25359 lignes)
+1. **reponses_jour1.md** — Réponses Q1–Q28 + R1–R3 avec commandes exactes et résultats
+2. **rapport.js** — Script mongosh exécutable (résultat visible ci-dessus)
+3. **capture_express.png** — Capture d'écran Mongo Express (collection `restaurants`)
+4. **README.md** — Ce fichier (instructions de reproduction)
+5. **docker-compose.yml** — Fichier d'orchestration Docker
+6. **primer-dataset.json** — Dataset (25359 lignes)
 
 **Lieu de rendu:** Teams (dossier TP Jour 1)
 
 ---
 
-## 📚 Ressources
+## Ressources
 
 - [MongoDB Docs](https://www.mongodb.com/docs/)
 - [mongosh Manual](https://www.mongodb.com/docs/mongodb-shell/)
@@ -366,7 +366,7 @@ docker compose restart mongo-express
 
 ---
 
-## ✍️ Notes d'implémentation
+## Notes d'implémentation
 
 ### Choix architecturaux
 
@@ -391,7 +391,7 @@ docker compose restart mongo-express
 
 ---
 
-## 🎯 Prochaines étapes (Jour 2)
+## Prochaines étapes (Jour 2)
 
 - Indexation et profiling (`createIndex`, `explain`)
 - Agrégation avancée (`$group`, `$project`, `$lookup`)
@@ -402,4 +402,4 @@ docker compose restart mongo-express
 
 **Date d'exécution:** 24 août 2026  
 **Durée:** ~4h (théorie + atelier)  
-**Statut:** ✅ Complet et reproductible
+**Statut:** Complet et reproductible
